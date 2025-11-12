@@ -5,12 +5,12 @@ hero:
   text: 整洁代码的实践指南
   tagline: Robert C. Martin 经典著作的中文翻译
   image:
-    src: /cover.jpg
+    src: cover.jpg
     alt: Clean Code 封面
   actions:
     - theme: brand
       text: 开始阅读
-      link: /ch1.md
+      link: ch1.md
     - theme: alt
       text: 在 GitHub 上查看
       link: https://github.com/lengsukq/Clean-Code-zh
