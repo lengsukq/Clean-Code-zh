@@ -1,6 +1,29 @@
 {
+  "name": "clean-code-zh",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lengsukq/Clean-Code-zh.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lengsukq/Clean-Code-zh/issues"
+  },
+  "homepage": "https://github.com/lengsukq/Clean-Code-zh#readme",
+  "devDependencies": {
+    "vitepress": "^1.6.4"
   }
 }
