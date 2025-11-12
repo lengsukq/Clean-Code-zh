@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Clean Code 中文",
   description: "Clean Code 中文翻译",
-  // base: "/doc-cleancode/", // 注释掉基础路径，在开发环境中使用根路径
+  base: "/doc-cleancode/", // 部署到Cloudflare Pages时使用的基础路径
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [],
