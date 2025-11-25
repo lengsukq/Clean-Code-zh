@@ -24,6 +24,22 @@ So what are the formatting issues that help us to communicate best?
 
 > 那么，哪些代码格式相关方面能帮我们最好地沟通呢？
 
+## 总结/摘要
+
+> This chapter establishes that **code formatting is crucial communication** that reflects professional attention to detail. Well-formatted code demonstrates professionalism and helps maintainability, while poorly formatted code suggests carelessness throughout the project. The chapter emphasizes that **readability has lasting impact** long after specific functionality changes.
+
+> 本章确立了**代码格式是至关重要的沟通**，反映了专业的细节关注。格式良好的代码展示了专业性并有助于可维护性，而格式糟糕的代码表明整个项目的粗心大意。本章强调**可读性具有持久影响**，远超特定功能变更的影响。
+
+> The chapter covers **vertical formatting** (file size, newspaper metaphor, vertical openness, density, distance, and ordering) and **horizontal formatting** (line length, horizontal openness/density, alignment, and indentation). It stresses the importance of **team rules** and consistent application of formatting standards, preferably automated through tools.
+
+> 本章涵盖了**垂直格式**（文件大小、报纸隐喻、垂直开放性、密度、距离和顺序）和**水平格式**（行长度、水平开放性/密度、对齐和缩进）。它强调了**团队规则**和格式标准一致应用的重要性，最好通过工具自动化。
+
+## 小结
+
+> Consistent code formatting is not about personal preference but about **professional communication**. Well-formatted code is easier to read, understand, and maintain. Teams should establish and follow clear formatting rules, using automated tools to ensure consistency. The investment in proper formatting pays dividends in code quality and team productivity throughout the project lifecycle.
+
+> 一致的代码格式不是关于个人偏好，而是关于**专业沟通**。格式良好的代码更易于阅读、理解和维护。团队应该建立并遵循清晰的格式规则，使用自动化工具确保一致性。在适当格式化方面的投入在整个项目生命周期中会在代码质量和团队生产力方面产生回报。
+
 ## 5.2 VERTICAL FORMATTING 垂直格式
 
 Let’s start with vertical size. How big should a source file be? In Java, file size is closely related to class size. We’ll talk about class size when we talk about classes. For the moment let’s just consider file size.

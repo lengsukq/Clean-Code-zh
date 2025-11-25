@@ -60,6 +60,22 @@ Truth can only be found in one place: the code. Only the code can truly tell you
 
 > 真实只在一处地方有：代码。只有代码能忠实地告诉你它做的事。那是唯一真正准确的信息来源。所以，尽管有时也需要注释，我们也该多花心思尽量减少注释量。
 
+## 总结/摘要
+
+> > This chapter challenges the conventional wisdom about comments, arguing that **comments are often failures** to express intent clearly in code. The fundamental principle is: **"Don't comment bad code—rewrite it."** Rather than using comments to explain confusing code, developers should strive to write **self-explanatory code** that rarely needs comments.
+
+> 本章挑战了关于注释的传统观点，认为**注释往往是表达意图失败**的表现。基本原则是：**"别给糟糕的代码加注释——重新写吧。"**与其用注释解释令人困惑的代码，开发者应该努力编写**很少需要注释的自解释代码**。
+
+> The chapter categorizes **good comments** (legal info, explanations of intent, clarifications, warnings, TODOs, and public API documentation) versus **bad comments** (mumbling, redundant, misleading, mandated, and noise). It emphasizes that **comments lie** over time as code changes but comments don't, making them potentially dangerous sources of misinformation.
+
+> 本章分类了**好注释**（法律信息、意图解释、澄清、警告、TODO和公共API文档）与**坏注释**（喃喃自语、多余、误导、强制性注释和噪音）。它强调**注释会撒谎**，因为代码会改变但注释不会，使注释成为潜在的危险错误信息来源。
+
+## 小结
+
+> Comments should be treated as a **necessary evil** rather than a primary communication tool. The best approach is to invest time in writing clean, expressive code that makes comments unnecessary. When comments are absolutely required, they should be accurate, concise, and maintained with the same rigor as the code itself. Always prefer improving code clarity over adding explanatory comments.
+
+> 注释应被视为**必要的恶**，而非主要的沟通工具。最好的方法是投入时间编写清洁、有表达力的代码，使注释变得不必要。当注释绝对必要时，它们应该准确、简洁，并以与代码本身相同的严格程度进行维护。始终优先改进代码清晰度，而非添加解释性注释。
+
 ## 4.1 COMMENTS DO NOT MAKE UP FOR BAD CODE 注释不能美化糟糕的代码
 
 One of the more common motivations for writing comments is bad code. We write a module and we know it is confusing and disorganized. We know it’s a mess. So we say to ourselves, “Ooh, I’d better comment that!” No! You’d better clean it!

@@ -36,6 +36,26 @@ Remember that code is really the language in which we ultimately express the req
 
 > 记住，代码确然是我们最终用来表达需求的那种语言。我们可以创造各种与需求接近的语言。我们可以创造帮助把需求解析和汇整为正式结构的各种工具。然而，我们永远无法抛弃必要的精确性——所以代码永存。
 
+## 总结/摘要
+
+This chapter establishes that **clean code is essential** for software development success. Bad code can destroy companies by slowing productivity to near zero, while **good code enables rapid development** and maintenance. The chapter emphasizes that **code will never disappear** despite advances in abstraction and tools, making the skill of writing clean code permanently valuable.
+
+> 本章确立了**整洁代码对软件开发成功的重要性**。糟糕的代码会将生产力拖至接近零，从而摧毁公司，而**好代码能够实现快速开发**和维护。本章强调，尽管抽象和工具不断进步，**代码永远不会消失**，这使得编写整洁代码的技能具有永久价值。
+
+The **total cost of ownership** for messy code is devastating - teams get bogged down in understanding tangled code, every change breaks multiple parts, and productivity asymptotically approaches zero. The **Boy Scout rule** teaches us to leave code cleaner than we found it through small, continuous improvements.
+
+> **混乱代码的总拥有成本**是毁灭性的——团队陷入理解纠缠代码的泥潭，每次修改都会破坏多个部分，生产力渐近地趋向于零。**童子军军规**教导我们通过小的、持续的改进来让代码比我们发现时更干净。
+
+## 小结
+
+Books on art don't promise to make you an artist. All they can do is give you some of the tools, techniques, and thought processes that other artists have used. So too this book cannot promise to make you a good programmer. It cannot promise to give you "code-sense." All it can do is show you the thought processes of good programmers and the tricks, techniques, and tools that they use.
+
+> 艺术书并不保证你读过之后能成为艺术家，只能告诉你其他艺术家用过的工具、技术和思维过程。本书同样也不担保让你成为好程序员。它不担保能给你"代码感"。它所能做的，只是展示好程序员的思维过程，还有他们使用的技巧、技术和工具。
+
+Just like a book on art, this book will be full of details. There will be lots of code. You'll see good code and you'll see bad code. You'll see bad code transformed into good code. You'll see lists of heuristics, disciplines, and techniques. You'll see example after example. After that, it's up to you.
+
+> 和艺术书一样，本书也充满了细节。代码会很多。你会看到好代码，也会看到糟糕的代码。你会看到糟糕的代码如何转化为好代码。你会看到启发、规条和技巧的列表。你会看到一个又一个例子。但最终结果取决于你自己。
+
 ## 1.2 BAD CODE 糟糕的代码
 
 I was recently reading the preface to Kent Beck’s book Implementation Patterns.1 He says, “… this book is based on a rather fragile premise: that good code matters….” A fragile premise? I disagree! I think that premise is one of the most robust, supported, and overloaded of all the premises in our craft (and I think Kent knows it). We know good code matters because we’ve had to deal for so long with its lack.
@@ -483,16 +503,6 @@ In many ways this book is a “prequel” to a book I wrote in 2002 entitled Agi
 In this book you will find sporadic references to various principles of design. These include the Single Responsibility Principle (SRP), the Open Closed Principle (OCP), and the Dependency Inversion Principle (DIP) among others. These principles are described in depth in PPP.
 
 > 在本书中，你会发现对不同设计原则的引用，包括单一权责原则（Single Responsibility Principle，SRP）、开放闭合原则（Open Closed Principle，OCP）和依赖倒置原则（Dependency Inversion Principle，DIP）等。
-
-## 1.8 CONCLUSION 小结
-
-Books on art don’t promise to make you an artist. All they can do is give you some of the tools, techniques, and thought processes that other artists have used. So too this book cannot promise to make you a good programmer. It cannot promise to give you “code-sense.” All it can do is show you the thought processes of good programmers and the tricks, techniques, and tools that they use.
-
-> 艺术书并不保证你读过之后能成为艺术家，只能告诉你其他艺术家用过的工具、技术和思维过程。本书同样也不担保让你成为好程序员。它不担保能给你“代码感”。它所能做的，只是展示好程序员的思维过程，还有他们使用的技巧、技术和工具。
-
-Just like a book on art, this book will be full of details. There will be lots of code. You’ll see good code and you’ll see bad code. You’ll see bad code transformed into good code. You’ll see lists of heuristics, disciplines, and techniques. You’ll see example after example. After that, it’s up to you.
-
-> 和艺术书一样，本书也充满了细节。代码会很多。你会看到好代码，也会看到糟糕的代码。你会看到糟糕的代码如何转化为好代码。你会看到启发、规条和技巧的列表。你会看到一个又一个例子。但最终结果取决于你自己。
 
 Remember the old joke about the concert violinist who got lost on his way to a performance? He stopped an old man on the corner and asked him how to get to Carnegie Hall. The old man looked at the violinist and the violin tucked under his arm, and said: “Practice, son. Practice!”
 
