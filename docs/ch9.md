@@ -2,15 +2,43 @@
 
 ![](figures/ch9/9_1fig_martin.jpg)
 
+## 总结/摘要
+
+**Unit tests are as important as production code** and must be kept clean to maintain code flexibility and maintainability.
+> **单元测试与生产代码同等重要**，必须保持整洁以维护代码的灵活性和可维护性。
+
+**The Three Laws of TDD** create a 30-second cycle: write failing test, write minimal code to pass, then refactor.
+> **TDD三定律**创造了一个30秒的循环：编写失败的测试，编写最少的代码使其通过，然后重构。
+
+**Clean tests follow the F.I.R.S.T. principles**: Fast, Independent, Repeatable, Self-Validating, and Timely.
+> **整洁测试遵循F.I.R.S.T.原则**：快速、独立、可重复、自我验证和及时。
+
+## 小结
+
+**Test code is a first-class citizen** that requires thought, design, and care just like production code.
+> **测试代码是一等公民**，需要像生产代码一样的思考、设计和关怀。
+
+**Dirty tests are worse than no tests** because they become a liability that hinders change and leads to code rot.
+> **脏测试比没有测试更糟糕**，因为它们会成为阻碍变更并导致代码腐烂的负累。
+
+**Domain-specific testing languages** make tests more readable and expressive by hiding irrelevant details.
+> **领域特定测试语言**通过隐藏无关细节使测试更具可读性和表现力。
+
 Our profession has come a long way in the last ten years. In 1997 no one had heard of Test Driven Development. For the vast majority of us, unit tests were short bits of throw-away code that we wrote to make sure our programs “worked.” We would painstakingly write our classes and methods, and then we would concoct some ad hoc code to test them. Typically this would involve some kind of simple driver program that would allow us to manually interact with the program we had written.
 
 I remember writing a C++ program for an embedded real-time system back in the mid-90s. The program was a simple timer with the following signature:
+
+> 我记得在90年代中期为一个嵌入式实时系统编写C++程序的经历。那个程序是一个简单的定时器，具有以下签名：
 ```cpp
    void Timer::ScheduleCommand(Command* theCommand, int milliseconds)
 ```
 The idea was simple; the execute method of the Command would be executed in a new thread after the specified number of milliseconds. The problem was, how to test it.
 
+> 想法很简单；Command的execute方法将在指定毫秒数后在新线程中执行。问题是，如何测试它。
+
 I cobbled together a simple driver program that listened to the keyboard. Every time a character was typed, it would schedule a command that would type the same character five seconds later. Then I tapped out a rhythmic melody on the keyboard and waited for that melody to replay on the screen five seconds later.
+
+> 我拼凑了一个简单的驱动程序来监听键盘。每当输入一个字符时，它会调度一个命令，在五秒后输入相同的字符。然后我在键盘上敲击有节奏的旋律，等待五秒后那个旋律在屏幕上重播。
 
 “I … want-a-girl … just … like-the-girl-who-marr … ied … dear … old … dad.”
 
@@ -18,35 +46,64 @@ I actually sang that melody while typing the “.” key, and then I sang it aga
 
 That was my test! Once I saw it work and demonstrated it to my colleagues, I threw the test code away.
 
+> 那就是我的测试！一旦我看到它工作并向同事们演示后，我就把测试代码扔掉了。
+
 As I said, our profession has come a long way. Nowadays I would write a test that made sure that every nook and cranny of that code worked as I expected it to. I would isolate my code from the operating system rather than just calling the standard timing functions. I would mock out those timing functions so that I had absolute control over the time. I would schedule commands that set boolean flags, and then I would step the time forward, watching those flags and ensuring that they went from false to true just as I changed the time to the right value.
 
+> 正如我所说，我们的行业取得了长足的进步。现在我会编写一个测试，确保代码的每个角落都按我的预期工作。我会将代码与操作系统隔离，而不是仅仅调用标准的定时函数。我会模拟那些定时函数，这样我就对时间有绝对的控制权。我会调度设置布尔标志的命令，然后推进时间，观察这些标志，确保它们在我将时间更改为正确值时从false变为true。
+
 Once I got a suite of tests to pass, I would make sure that those tests were convenient to run for anyone else who needed to work with the code. I would ensure that the tests and the code were checked in together into the same source package.
+
+> 一旦我让一套测试通过，我会确保这些测试对需要使用该代码的任何其他人来说都方便运行。我会确保测试和代码一起检入到同一个源代码包中。
 
 Yes, we’ve come a long way; but we have farther to go. The Agile and TDD movements have encouraged many programmers to write automated unit tests, and more are joining their ranks every day. But in the mad rush to add testing to our discipline, many programmers have missed some of the more subtle, and important, points of writing good tests.
 
 THE THREE LAWS OF TDD
+
+> TDD三定律
+
 By now everyone knows that TDD asks us to write unit tests first, before we write production code. But that rule is just the tip of the iceberg. Consider the following three laws:1
+
+> 到现在，每个人都知道TDD要求我们在编写生产代码之前先编写单元测试。但那规则只是冰山一角。考虑以下三条定律：1
 
 1. Professionalism and Test-Driven Development, Robert C. Martin, Object Mentor, IEEE Software, May/June 2007 (Vol. 24, No. 3) pp. 32–36
 
+> 1. Professionalism and Test-Driven Development, Robert C. Martin, Object Mentor, IEEE Software, May/June 2007 (Vol. 24, No. 3) pp. 32–36
+
 http://doi.ieeecomputersociety.org/10.1109/MS.2007.85
+
+> http://doi.ieeecomputersociety.org/10.1109/MS.2007.85
 
 First Law You may not write production code until you have written a failing unit test.
 
+> 第一定律 **在编写失败的单元测试之前，你不能编写生产代码**。
+
 Second Law You may not write more of a unit test than is sufficient to fail, and not compiling is failing.
+
+> 第二定律 **你不能编写超过足以失败的单元测试代码，编译失败也是失败**。
 
 Third Law You may not write more production code than is sufficient to pass the currently failing test.
 
+> 第三定律 **你不能编写超过足以使当前失败测试通过的生产代码**。
+
 These three laws lock you into a cycle that is perhaps thirty seconds long. The tests and the production code are written together, with the tests just a few seconds ahead of the production code.
+
+> 这三条定律将你锁定在一个大约30秒的循环中。测试和生产代码是一起编写的，测试只比生产代码提前几秒钟。
 
 If we work this way, we will write dozens of tests every day, hundreds of tests every month, and thousands of tests every year. If we work this way, those tests will cover virtually all of our production code. The sheer bulk of those tests, which can rival the size of the production code itself, can present a daunting management problem.
 
+> 如果我们这样工作，我们每天将编写几十个测试，每月几百个测试，每年几千个测试。如果我们这样工作，这些测试将几乎覆盖我们所有的生产代码。这些测试的庞大数量，可能与生产代码本身的规模相媲美，会带来一个令人望而生畏的管理问题。
+
 KEEPING TESTS CLEAN
+
+> 保持测试整洁
 Some years back I was asked to coach a team who had explicitly decided that their test code should not be maintained to the same standards of quality as their production code. They gave each other license to break the rules in their unit tests. “Quick and dirty” was the watchword. Their variables did not have to be well named, their test functions did not need to be short and descriptive. Their test code did not need to be well designed and thoughtfully partitioned. So long as the test code worked, and so long as it covered the production code, it was good enough.
 
 Some of you reading this might sympathize with that decision. Perhaps, long in the past, you wrote tests of the kind that I wrote for that Timer class. It’s a huge step from writing that kind of throw-away test, to writing a suite of automated unit tests. So, like the team I was coaching, you might decide that having dirty tests is better than having no tests.
 
 What this team did not realize was that having dirty tests is equivalent to, if not worse than, having no tests. The problem is that tests must change as the production code evolves. The dirtier the tests, the harder they are to change. The more tangled the test code, the more likely it is that you will spend more time cramming new tests into the suite than it takes to write the new production code. As you modify the production code, old tests start to fail, and the mess in the test code makes it hard to get those tests to pass again. So the tests become viewed as an ever-increasing liability.
+
+> 这个团队没有意识到的是，拥有脏测试等同于，甚至比没有测试更糟糕。问题是测试必须随着生产代码的演进而改变。测试越脏，就越难改变。测试代码越混乱，你就越有可能花费更多时间将新测试塞入套件中，而不是编写新的生产代码。当你修改生产代码时，旧测试开始失败，测试代码中的混乱使得很难让这些测试再次通过。因此，测试被视为不断增加的负累。
 
 From release to release the cost of maintaining my team’s test suite rose. Eventually it became the single biggest complaint among the developers. When managers asked why their estimates were getting so large, the developers blamed the tests. In the end they were forced to discard the test suite entirely.
 
@@ -56,7 +113,11 @@ In a way they were right. Their testing effort had failed them. But it was their
 
 The moral of the story is simple: Test code is just as important as production code. It is not a second-class citizen. It requires thought, design, and care. It must be kept as clean as production code.
 
+> 这个故事的寓意很简单：**测试代码与生产代码同等重要**。它不是二等公民。它需要思考、设计和关怀。它必须保持与生产代码一样整洁。
+
 Tests Enable the -ilities
+
+> 测试实现各种能力
 If you don’t keep your tests clean, you will lose them. And without them, you lose the very thing that keeps your production code flexible. Yes, you read that correctly. It is unit tests that keep our code flexible, maintainable, and reusable. The reason is simple. If you have tests, you do not fear making changes to the code! Without tests every change is a possible bug. No matter how flexible your architecture is, no matter how nicely partitioned your design, without tests you will be reluctant to make changes because of the fear that you will introduce undetected bugs.
 
 But with tests that fear virtually disappears. The higher your test coverage, the less your fear. You can make changes with near impunity to code that has a less than stellar architecture and a tangled and opaque design. Indeed, you can improve that architecture and design without fear!
@@ -66,7 +127,12 @@ So having an automated suite of unit tests that cover the production code is the
 So if your tests are dirty, then your ability to change your code is hampered, and you begin to lose the ability to improve the structure of that code. The dirtier your tests, the dirtier your code becomes. Eventually you lose the tests, and your code rots.
 
 CLEAN TESTS
+
+> 整洁的测试
+
 What makes a clean test? Three things. Readability, readability, and readability. Readability is perhaps even more important in unit tests than it is in production code. What makes tests readable? The same thing that makes all code readable: clarity, simplicity, and density of expression. In a test you want to say a lot with as few expressions as possible.
+
+> 什么使测试整洁？三件事。可读性，可读性，还是可读性。在单元测试中，可读性可能比在生产代码中更重要。什么使测试可读？使所有代码可读的同样东西：清晰性、简洁性和表达的密度。在测试中，你想用尽可能少的表达说很多话。
 
 Consider the code from FitNesse in Listing 9-1. These three tests are difficult to understand and can certainly be improved. First, there is a terrible amount of duplicate code [G5] in the repeated calls to addPage and assertSubString. More importantly, this code is just loaded with details that interfere with the expressiveness of the test.
 
