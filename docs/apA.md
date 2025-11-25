@@ -2,6 +2,20 @@
 Concurrency II
 by Brett L. Schuchert
 
+## 总结/摘要 Summary
+
+This appendix delves into concurrency at a deep technical level, exploring practical patterns for multi-threaded systems. Brett L. Schuchert provides detailed examples of client/server architecture, threading policies, and shutdown sequences. Key practices include **separating concerns between threading and business logic**, **using abstractions like thread pools**, and **managing thread lifecycle carefully**. The emphasis is on **writing systems that scale elegantly** while maintaining **thread safety and clean architecture**. These patterns represent **best practices for production systems** handling concurrent requests.
+
+> 本附录在深层技术级别深入探讨并发，探索多线程系统的实际模式。Brett L. Schuchert 提供了客户端/服务器架构、线程策略和关闭序列的详细示例。关键实践包括**分离线程和业务逻辑之间的关注点**、**使用线程池等抽象**和**仔细管理线程生命周期**。重点是**编写能够优雅扩展**同时维护**线程安全和整洁架构**的系统。这些模式代表**处理并发请求的生产系统**的**最佳实践**。
+
+## 小结 Conclusion
+
+Concurrency is complex but essential in modern systems. **Thoughtful design** and **rigorous testing** are non-negotiable. The patterns presented—from executor frameworks to graceful shutdown—ensure systems remain **reliable under concurrent load**. By isolating threading concerns from business logic, developers create systems that are both **robust and maintainable**. The investment in understanding concurrency yields systems that **scale predictably** and **fail gracefully**.
+
+> 并发在现代系统中是复杂但至关重要的。**周密的设计**和**严格的测试**是不可商议的。所提出的模式——从执行器框架到优雅关闭——确保系统在并发负载下保持**可靠**。通过将线程关注点与业务逻辑隔离，开发者创建既**健壮又易维护**的系统。投入理解并发产生**可预测扩展**和**优雅失败**的系统。
+
+---
+
 This appendix supports and amplifies the Concurrency chapter on page 177. It is written as a series of independent topics and you can generally read them in any order. There is some duplication between sections to allow for such reading.
 
 CLIENT/SERVER EXAMPLE
