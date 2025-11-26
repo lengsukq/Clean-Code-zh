@@ -6,6 +6,22 @@ There is a reason that we keep our variables private. We don’t want anyone els
 
 > 将变量设置为私有（private）有一个理由：我们不想其他人依赖这些变量。我们还想在心血来潮时能自由修改其类型或实现。那么，为什么还是有那么多程序员给对象自动添加赋值器和取值器，将私有变量公之于众、如同它们根本就是公共变量一般呢？
 
+## 总结/摘要
+
+This chapter explores the crucial distinction between **objects and data structures**, emphasizing that **data abstraction** hides implementation while exposing behavior. The chapter introduces the **Law of Demeter** to prevent "train wrecks" and promotes proper encapsulation. It contrasts **objects** (hide data, expose behavior) with **data structures** (expose data, no significant behavior).
+
+> 本章探讨了**对象和数据结构**之间的关键区别，强调**数据抽象**隐藏实现而暴露行为。本章引入**得墨忒耳律**以防止"火车失事"并促进适当的封装。它对比了**对象**（隐藏数据，暴露行为）与**数据结构**（暴露数据，无重要行为）。
+
+Key concepts include **data/object anti-symmetry**, where objects and data structures have opposite characteristics, and **Data Transfer Objects (DTOs)** for transporting data between processes. The chapter warns against **hybrids** that try to be both objects and data structures simultaneously, and advocates choosing one paradigm or the other for clarity.
+
+> 关键概念包括**数据/对象反对称性**，其中对象和数据结构具有相反的特征，以及用于在进程间传输数据的**数据传送对象（DTO）**。本章警告不要试图同时成为对象和数据结构的**混杂**类型，并主张为了清晰选择一种范式或另一种。
+
+## 小结
+
+Understanding the difference between objects and data structures is fundamental to clean code design. Objects should hide their data behind abstractions and expose behavior, while data structures should expose their data without behavior. Avoid hybrids that combine both approaches, and apply the Law of Demeter to maintain proper encapsulation and reduce coupling in your designs.
+
+> 理解对象和数据结构之间的区别是整洁代码设计的基础。对象应该在抽象后面隐藏数据并暴露行为，而数据结构应该暴露数据而没有行为。避免结合两种方法的混杂类型，并在设计中应用得墨忒耳律以保持适当的封装并减少耦合。
+
 ## 6.1 DATA ABSTRACTION 数据抽象
 
 Consider the difference between Listing 6-1 and Listing 6-2. Both represent the data of a point on the Cartesian plane. And yet one exposes its implementation and the other completely hides it.

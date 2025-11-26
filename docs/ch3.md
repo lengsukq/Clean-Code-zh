@@ -123,6 +123,22 @@ So what is it that makes a function like Listing 3-2 easy to read and understand
 
 > 是什么让代码清单 3-2 易于阅读和理解？怎么才能让函数表达其意图？该给函数赋予哪些属性，好让读者一看就明白函数是属于怎样的程序？
 
+## 总结/摘要
+
+This chapter establishes that **functions should be small** - ideally no more than 20 lines, with many being just 2-4 lines long. **Each function should do one thing** and do it well, operating at a **single level of abstraction**. The chapter demonstrates how small, focused functions create code that reads like a well-written narrative, making it easier to understand and maintain.
+
+> 本章确立了**函数应该短小**的原则——理想情况下不超过20行，许多函数只有2-4行长。**每个函数应该只做一件事**并做好，在**单一抽象层级**上操作。本章展示了小型、专注的函数如何创建出像优秀叙事一样易于阅读的代码，使其更容易理解和维护。
+
+Key guidelines include using **descriptive names** that reveal function intent, **limiting function arguments** (preferably none, with special handling for flags and output parameters), and ensuring **no side effects**. The chapter emphasizes separating **commands from queries** and using **exceptions instead of error codes** for better error handling and cleaner code flow.
+
+> 关键指导原则包括使用揭示函数意图的**描述性名称**，**限制函数参数**（最好没有，对标识参数和输出参数有特殊处理），以及确保**无副作用**。本章强调**分隔指令与询问**，并使用**异常而非错误代码**以获得更好的错误处理和更清洁的代码流。
+
+## 小结
+
+Well-designed functions are the building blocks of clean code. By keeping functions small, focused, and operating at consistent abstraction levels, we create code that is naturally readable and maintainable. The investment in crafting functions with clear names, minimal arguments, and single responsibilities pays dividends throughout the software lifecycle, making the codebase more approachable for all developers.
+
+> 设计良好的函数是整洁代码的构建块。通过保持函数短小、专注并在一致的抽象层级上操作，我们创建出自然可读和可维护的代码。在精心设计具有清晰名称、最少参数和单一职责的函数方面的投入，在整个软件生命周期中都会产生回报，使代码库对所有开发者都更易于理解。
+
 ## 3.1 SMALL! 短小
 
 The first rule of functions is that they should be small. The second rule of functions is that they should be smaller than that. This is not an assertion that I can justify. I can’t provide any references to research that shows that very small functions are better. What I can tell you is that for nearly four decades I have written functions of all different sizes. I’ve written several nasty 3,000-line abominations. I’ve written scads of functions in the 100 to 300 line range. And I’ve written functions that were 20 to 30 lines long. What this experience has taught me, through long trial and error, is that functions should be very small.

@@ -10,6 +10,22 @@ Names are everywhere in software. We name our variables, our functions, our argu
 
 > 软件中随处可见命名。我们给变量、函数、参数、类和封包命名。我们给源代码及源代码所在目录命名。我们给 jar 文件、war 文件和 ear 文件命名。我们命名、命名，不断命名。既然有这么多命名要做，不妨做好它。下文列出了取个好名字的几条简单规则。
 
+## 总结/摘要
+
+This chapter emphasizes that **meaningful names are crucial** for code readability and maintenance. **Intention-revealing names** should answer why something exists, what it does, and how it's used without requiring additional comments. The chapter provides comprehensive guidelines for creating **clear, pronounceable, and searchable names** that enhance code comprehension.
+
+> 本章强调**有意义的命名对代码可读性和维护性至关重要**。**名副其实的名称**应该回答某物为何存在、做什么以及如何使用，而无需额外注释。本章提供了创建**清晰、可发音、可搜索的名称**的综合指导原则，以增强代码理解度。
+
+Key principles include **avoiding disinformation** through accurate naming, making **meaningful distinctions** between similar concepts, and using **pronounceable names** that facilitate team communication. The chapter also advises against **mental mapping** where readers must translate names, and recommends using **problem domain names** when solution domain terms aren't available.
+
+> 关键原则包括通过准确命名**避免误导**，在相似概念间做出**有意义的区分**，以及使用便于团队沟通的**可发音名称**。本章还建议避免读者需要翻译名称的**思维映射**，并在解决方案领域术语不可用时使用**问题领域名称**。
+
+## 小结
+
+Creating good names is hard work but pays dividends in code maintainability. The time invested in choosing clear, intention-revealing names is saved many times over when the code is read, modified, and extended by team members. Consistent application of these naming principles transforms code from an obscure implementation detail into a clear expression of intent.
+
+> 创建好名字是艰苦的工作，但在代码可维护性方面会带来回报。在代码被团队成员阅读、修改和扩展时，选择清晰、名副其实名称所投入的时间会得到多次回报。一致应用这些命名原则能将代码从模糊的实现细节转变为意图的清晰表达。
+
 ## 2.2 USE INTENTION-REVEALING NAMES 名副其实
 
 It is easy to say that names should reveal intent. What we want to impress upon you is that we are serious about this. Choosing good names takes time but saves more than it takes. So take care with your names and change them when you find better ones. Everyone who reads your code (including you) will be happier if you do.

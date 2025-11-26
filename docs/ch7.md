@@ -16,6 +16,22 @@ In this chapter I’ll outline a number of techniques and considerations that yo
 
 > 在本章中，我将概要列出编写既整洁又强固的代码——雅致地处理错误代码的一些技巧和思路。
 
+## 总结/摘要
+
+> This chapter addresses **clean error handling** techniques that maintain code clarity while ensuring robustness. The fundamental principle is that error handling should **not obscure the main logic** of the code. The chapter strongly advocates using **exceptions instead of return codes** to separate error handling from normal code flow and make error paths more visible.
+
+> 本章阐述了在确保健壮性的同时保持代码清晰度的**整洁错误处理**技术。基本原则是错误处理应该**不掩盖代码的主要逻辑**。本章强烈主张使用**异常而非返回码**，以将错误处理与正常代码流分离，并使错误路径更明显。
+
+> Key practices include using **unchecked exceptions** for programming errors, **providing context** with exceptions to aid debugging, and **defining exception classes** based on caller needs. The chapter introduces the concept of **defining normal flow** with Special Case patterns and provides strong guidance to **avoid null** entirely in both return values and parameters.
+
+> 关键实践包括对编程错误使用**不可控异常**，**提供异常上下文**以帮助调试，以及**根据调用者需求定义异常类**。本章引入了使用特例模式**定义常规流程**的概念，并提供了强有力的指导来**完全避免null**，无论是在返回值还是参数中。
+
+## 小结
+
+> Clean error handling is about separating error concerns from business logic while maintaining code readability. Use exceptions to handle exceptional cases, provide meaningful context in error messages, and design your APIs to make error handling natural and straightforward. By following these principles, error handling becomes a supporting aspect of the code rather than a dominating force that obscures the intended functionality.
+
+> 整洁的错误处理是将错误关注点与业务逻辑分离，同时保持代码可读性。使用异常处理异常情况，在错误消息中提供有意义的上下文，并设计API使错误处理自然直接。通过遵循这些原则，错误处理成为代码的支持方面，而不是掩盖预期功能的主导力量。
+
 ## 7.1 USE EXCEPTIONS RATHER THAN RETURN CODES 使用异常而非返回码
 
 Back in the distant past there were many languages that didn’t have exceptions. In those languages the techniques for handling and reporting errors were limited. You either set an error flag or returned an error code that the caller could check. The code in Listing 7-1 illustrates these approaches.

@@ -6,7 +6,23 @@ by James Grenning
 
 We seldom control all the software in our systems. Sometimes we buy third-party packages or use open source. Other times we depend on teams in our own company to produce components or subsystems for us. Somehow we must cleanly integrate this foreign code with our own. In this chapter we look at practices and techniques to keep the boundaries of our software clean.
 
-> 我们很少控制系统中的全部软件。有时我们购买第三方程序包或使用开放源代码，有时我们依靠公司中其他团队打造组件或子系统。不管是哪种情况，我们都得将外来代码干净利落地整合进自己的代码中。本章将介绍一些保持软件边界整洁的实践手段和技巧。
+> 我们很少控制系统中的全部软件。有时我们购买第三方程序包或使用开放源代码，有时我们依靠公司中其他团队打造组件或子系统。不管是哪种情况，我们都都得将外来代码干净利落地整合进自己的代码中。本章将介绍一些保持软件边界整洁的实践手段和技巧。
+
+## 总结/摘要
+
+> This chapter addresses **managing boundaries** between different parts of software systems, particularly when integrating **third-party code**. The key challenge is the tension between interface providers who want broad applicability and users who need focused, specific solutions. The chapter teaches how to maintain clean boundaries while managing these competing interests.
+
+> 本章阐述了**管理软件系统不同部分之间边界**的问题，特别是在集成**第三方代码**时。关键挑战在于接口提供者想要广泛适用性与用户需要专注、特定解决方案之间的张力。本章教导如何在管理这些竞争利益的同时保持边界整洁。
+
+> Key strategies include **exploring and learning boundaries** through experimentation, using **learning tests** to understand third-party code, and creating **adapter/wrapper patterns** to isolate external dependencies. The chapter also covers **using code that doesn't yet exist** through interface-based design and maintaining **clean boundaries** through careful dependency management.
+
+> 关键策略包括通过实验**探索和学习边界**，使用**学习性测试**理解第三方代码，以及创建**适配器/包装器模式**来隔离外部依赖。本章还涵盖了通过基于接口的设计**使用尚不存在的代码**，以及通过仔细的依赖管理维护**整洁的边界**。
+
+## 小结
+
+> Clean boundaries require careful management of dependencies and interfaces between different system components. When working with third-party code, create isolation layers to protect your codebase from external changes. Use learning tests to understand unfamiliar code, and design interfaces that serve your specific needs rather than exposing the full capabilities of external dependencies.
+
+> 整洁的边界需要仔细管理不同系统组件之间的依赖和接口。在使用第三方代码时，创建隔离层来保护代码库免受外部变化的影响。使用学习性测试来理解不熟悉的代码，并设计服务于特定需求的接口，而不是暴露外部依赖的全部功能。
 
 ## 8.1 USING THIRD-PARTY CODE 使用第三方代码
 
